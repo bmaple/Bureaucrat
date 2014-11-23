@@ -3,13 +3,12 @@ class AuthController extends Controller {
        public function getLogin() {
            return View::make('login');
        }
-
        public function postLogin() {
            $rules = array('username' => 'required', 'password' => 'required');
            $validator = Validator::make(Input::all(), $rules);
-
+           
            if($validator->fails()){
-               return Redirect::route('login')->withErrors($validator);
+              return Redirect::route('login')->withErrors($validator);
            }
            $auth = Auth::attempt(array(
                'username' => Input::get('username'),
@@ -21,6 +20,5 @@ class AuthController extends Controller {
                    'Bad login information'
                ));
            }
-           return Route('home');
        }
 }
