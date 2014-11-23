@@ -12,5 +12,5 @@
 */
 
 Route::get('/', array('uses' => 'HomeController@getIndex'));
-
-Route::get('Comment', array('uses' => 'CommentController@get_index'));
+Route::get('/login', array('as' => 'login', 'uses' => 'AuthController@getLogin'));
+Route::get('login', array('uses' => 'AuthController@postLogin'));
