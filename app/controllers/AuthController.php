@@ -20,5 +20,6 @@ class AuthController extends Controller {
                    'Bad login information'
                ));
            }
+           return Redirect::route('home');
        }
 }
