@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', array('uses' => 'HomeController@getIndex'));
+Route::get('/', function()
+{
+	return View::make('hello');
+});
 
 Route::get('Comment', array('uses' => 'CommentController@get_index'));
