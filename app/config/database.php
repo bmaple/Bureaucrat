@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'bureaucrat',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'bur.ccg2fbosv7le.us-west-2.rds.amazonaws.com:3306',
+			'database'  => 'Bureaucrat',
+			'username'  => 'bmaple',
+			'password'  => 'security',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
